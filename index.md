@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "Online clustering: algorithms, evaluation, metrics, application and benchmarking"
-description: Tutorial presented at the 28<sup>th</sup> ACM SIGKDD Conference on Knowledge Discovery and Data Mining, August 14<sup>th</sup> - 18<sup>th</sup>, 2022, Washington DC Convention Center.
+title: "Opportunities and Challenges for Online Deep Learning"
+description: Tutorial presented at the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD), 2023, Turin, Italy.
 ---
 
 <style type="text/css">
@@ -17,11 +17,8 @@ description: Tutorial presented at the 28<sup>th</sup> ACM SIGKDD Conference on 
 
 The agenda of the tutorial will be as follows:
 
-* **Place**: Room 203A, Washington DC Convention Center
-* **Time**: Sunday, August 14th 2022, 09:00 AM - 12:00 AM (GMT-5)
-* **Track**: Lecture-style tutorials
-
-The full information of this tutorial can be found within the KDD'22 Proceeding, available [here](https://dl.acm.org/doi/10.1145/3534678.3542600). Citation can be exported directly from this site, or can also be found [below](#citation).
+* **Place**: Polytechnico di Torino
+* **Time**: Friday, September 22nd 2023, afternoon (GMT+1)
 
 # Abstract
 
