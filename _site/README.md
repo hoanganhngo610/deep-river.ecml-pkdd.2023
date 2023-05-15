@@ -1,6 +1,6 @@
 # Introduction
 
-This repository serves as the official website for the tutorial "Online Clustering: Algorithms, Evaluation, Metrics, Applications and Benchmarking" at [this site](https://hoanganhngo610.github.io/river-clustering.kdd.2022/).
+This repository serves as the official website for the tutorial "Online Clustering: Algorithms, Evaluation, Metrics, Applications and Benchmarking" at [this site](https://hoanganhngo610.github.io/deep-river.ecml-pkdd.2023/).
 
 This website is generated using Github Pages, using The Cayman theme.
 

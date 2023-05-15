@@ -66,17 +66,23 @@ Website: [https://albertbifet.com/](https://albertbifet.com/)
 
 # Presenters' contact information
 
-### Jacob Montiel
+### Cedric Kulbach
 
-&nbsp; Artificial Intelligence Institute, University of Waikato, Hamilton, New Zealand and LCTI, Télécom Paris, Institut Polytechnique de Paris, France
+&nbsp; FZI Research Center for Information Technology, Karlsruhe, Germany
 
-&nbsp; Email: [jmontiel@waikato.ac.nz](mailto:jmontiel@waikato.ac.nz)
+&nbsp; Email: [kulbach@fzi.de](mailto:kulbach@fzi.de)
+
+### Lucas Cazzonelli
+
+&nbsp; FZI Research Center for Information Technology, Karlsruhe, Germany
+
+&nbsp; Email: [cazzonelli@fzi.de](mailto:cazzonelli@fzi.de)
 
 ### Hoang-Anh Ngo
 
-&nbsp; LCTI, Télécom Paris, Institut Polytechnique de Paris, France
+&nbsp; Artificial Intelligence Institute, University of Waikato, Hamilton, New Zealand
 
-&nbsp; Email: [hoang.ngo@telecom-paris.fr](mailto:hoang.ngo@telecom-paris.fr)
+&nbsp; Email: [h.a.ngo@sms.ed.ac.uk](mailto:h.a.ngo@sms.ed.ac.uk)
 
 ### Minh-Huong Le Nguyen
 
