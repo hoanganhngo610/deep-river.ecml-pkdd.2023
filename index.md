@@ -26,23 +26,33 @@ Machine learning algorithms have become indispensable in today's world. They sup
 
 # Presenters' bibliography
 
-<img src="presenter-pics/jacob-montiel.jpg" alt="drawing" width="220" style="border-radius:60%"/>{: .image-left } 
+The following authors will be in-person presenters, i.e., tutors who will attend ECML-PKDD 2023 and present part of the tutorial: **Cedric Kulbach**, **Lucas Cazzonelli**, **Hoang-Anh Ngo**, **Minh-Huong Le-Nguyen** and **Albert Bifet**.
 
-**Jacob Montiel** is a research fellow at the University of Waikato in New Zealand and the core developer and maintainer of `River`. His research interests are in the field of machine learning for evolving data streams. Prior to focusing on research, Jacob led development work for onboard software for aircraft and engine’s prognostics at GE Aviation; working in the development of GE’s Brilliant Machines, part of the IoT and GE’s approach to Industrial Big Data.
+<img src="presenter-pics/cedric-kulbach.jpg" alt="drawing" width="220" style="border-radius:60%"/>{: .image-left } 
 
-Website: [https://jacobmontiel.github.io/](https://jacobmontiel.github.io/)
+**Cedric Kulbach** studied industrial engineering at the Karlsruhe Institute of Technology (KIT) with a focus on operations research and simulation, and at the Institut Polytechnique de Grenoble (INP) with a focus on product development. He wrote his master's thesis on the integrated simulation and optimisation of supply networks using the example of Bugatti Automobiles S.A.S. in collaboration with the Institute of Materials Handling and Logistics Systems (IFL), the Institut Polytechnique de Grenoble and Bugatti Automobiles S.A.S..
+
+Since August 2018, he has been working in the Information Process Engineering (IPE) research area and is mainly involved in the topics of automated machine learning, pipeline learning and its possibilities for personalization and data stream learning.
+
+<br clear="left"/>
+
+<img src="presenter-pics/lucas-cazzonelli.jpg" alt="drawing" width="220" style="border-radius:60%"/>{: .image-left } 
+
+**Lucas Cazzonelli** is a research assistant at the department of knowledge management of FZI Research Center for Information Technology in Germany. As part of his research, he mainly investigates the adaptation of deep learning approaches to evolving data environments. In this context, he also contributed to the `deep-river` online deep learning framework as a co-developer, where his involvement is focused on anomaly detection techniques.
 
 <br clear="left"/>
 
 <img src="presenter-pics/hoang-anh.ngo.jpg" alt="drawing" width="220" style="border-radius:60%"/>{: .image-left } 
 
-**Hoang-Anh Ngo** is currently a Research Assistant at Data, Intelligence and Graph (DIG), LCTI, Télécom Paris, Institut Polytechnique de Paris, France. He is also a core developer and maintainer of River, the machine learning library in Python for data streams. His research interests lies in the field of machine learning for evolving data stream, particularly in online clustering and classification algorithms. Previously, he joined the team of IT Specialists in COVID-19 task force, formed by the Ministry of Health of Vietnam as a Epidemiological Modelling Unit head.
+**Hoang-Anh Ngo** is currently supported by the AI Institute and the School of Computing and Mathematical Sciences, University of Waikato under an External Study Award (ESA) to support his research on `River`, the machine learning library in Python for data streams. 
+
+His research interests lies in the field of machine learning for evolving data stream, particularly in online clustering and classification algorithms. Previously, he joined the team of IT Specialists in COVID-19 task force, formed by the Ministry of Health of Vietnam as a Epidemiological Modelling Unit head.
 
 <br clear="left"/>
 
 <img src="presenter-pics/minh-huong.le-nguyen.jpg" alt="drawing" width="220" style="border-radius:60%"/>{: .image-left } 
 
-**Minh-Huong Le-Nguyen** is a third-year doctoral student at Telecom Paris, Institut Polytechnique de Paris in France. Her doctoral research focuses on the applications of machine learning on data streams to implement predictive maintenance in the railway industry. She received her Bachelor's degree in Computer Science at University Pierre and Marie Curie (France) in 2013, then she graduated from Telecom Paris (France) with a Master's degree in Data science in 2019.
+**Minh-Huong Le-Nguyen** is a third-year doctoral student at LCTI, Télécom Paris, Institut Polytechnique de Paris in France. Her doctoral research focuses on the applications of machine learning on data streams to implement predictive maintenance in the railway industry. She received her Bachelor’s degree in Computer Science at University Pierre and Marie Curie (France) in 2013, then she graduated from Télécom Paris with a Master’s degree in Data Science in 2019.
 
 <br clear="left"/>
 

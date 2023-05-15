@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Opportunities and Challenges for Online Deep Learning | Online clustering: algorithms, evaluation, metrics, application and benchmarking using River</title>
+<meta name="generator" content="Jekyll v3.9.2" />
+<meta property="og:title" content="Opportunities and Challenges for Online Deep Learning" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tutorial presented at the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD), 2023, Turin, Italy." />
+<meta property="og:description" content="Tutorial presented at the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD), 2023, Turin, Italy." />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Online clustering: algorithms, evaluation, metrics, application and benchmarking using River" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Opportunities and Challenges for Online Deep Learning" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"Tutorial presented at the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD), 2023, Turin, Italy.","headline":"Opportunities and Challenges for Online Deep Learning","name":"Online clustering: algorithms, evaluation, metrics, application and benchmarking using River","url":"http://localhost:4000/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="/assets/css/style.css?v=72c86808d910410b54a3422ca4fac655ff67b5a4">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'true', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+    <header class="page-header" role="banner">
+      <h1 class="project-name">Opportunities and Challenges for Online Deep Learning</h1>
+      <h2 class="project-tagline">Tutorial presented at the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD), 2023, Turin, Italy.</h2>
+      
+        <a href="./index.html" class="btn">Homepage</a>
+        <a href="./related-materials.html" class="btn">Related materials</a>
+      
+      
+        <a href="https://riverml.xyz/latest/" class="btn">River's webpage</a>
+        <a href="https://www.kdd.org/kdd2022/index.html" class="btn">KDD 2022</a>
+      
+    </header>
+
+    <main id="content" class="main-content" role="main">
+      <style type="text/css">
+  .image-left {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: right;
+  }
+</style>
+
+<h1 id="practical-information">Practical information</h1>
+
+<p>The agenda of the tutorial will be as follows:</p>
+
+<ul>
+  <li><strong>Place</strong>: Polytechnico di Torino</li>
+  <li><strong>Time</strong>: Friday, September 22nd 2023, afternoon (GMT+1)</li>
+</ul>
+
+<h1 id="abstract">Abstract</h1>
+
+<p>Machine learning algorithms have become indispensable in today’s world. They support and accelerate the way we make decisions based on the data at hand. This acceleration means that data structures that were valid at a moment could no longer be valid in the future. With these changing data structures, it is necessary to adapt machine learning (ML) systems incrementally to the new data. This is done with the use of online learning or continuous ML technologies. While Deep Learning technologies have shown exceptional performance on predefined datasets, they have not been widely applied to online, streaming and continuous learning. This tutorial illustrates with the frameworks <code class="language-plaintext highlighter-rouge">River</code> and <code class="language-plaintext highlighter-rouge">deep-river</code> the opportunities, but also the potential pitfalls for the application of neural networks in online learning environments.</p>
+
+<h1 id="presenters-bibliography">Presenters’ bibliography</h1>
+
+<p>The following authors will be in-person presenters, i.e., tutors who will attend ECML-PKDD 2023 and present part of the tutorial: <strong>Cedric Kulbach</strong>, <strong>Lucas Cazzonelli</strong>, <strong>Hoang-Anh Ngo</strong>, <strong>Minh-Huong Le-Nguyen</strong> and <strong>Albert Bifet</strong>.</p>
+
+<p><img src="presenter-pics/cedric-kulbach.jpg" alt="drawing" width="220" style="border-radius:60%" class="image-left" /></p>
+
+<p><strong>Cedric Kulbach</strong> studied industrial engineering at the Karlsruhe Institute of Technology (KIT) with a focus on operations research and simulation, and at the Institut Polytechnique de Grenoble (INP) with a focus on product development. He wrote his master’s thesis on the integrated simulation and optimisation of supply networks using the example of Bugatti Automobiles S.A.S. in collaboration with the Institute of Materials Handling and Logistics Systems (IFL), the Institut Polytechnique de Grenoble and Bugatti Automobiles S.A.S..</p>
+
+<p>Since August 2018, he has been working in the Information Process Engineering (IPE) research area and is mainly involved in the topics of automated machine learning, pipeline learning and its possibilities for personalization and data stream learning.</p>
+
+<p><br clear="left" /></p>
+
+<p><img src="presenter-pics/lucas-cazzonelli.jpg" alt="drawing" width="220" style="border-radius:60%" class="image-left" /></p>
+
+<p><strong>Lucas Cazzonelli</strong> is a research assistant at the department of knowledge management of FZI Research Center for Information Technology in Germany. As part of his research, he mainly investigates the adaptation of deep learning approaches to evolving data environments. In this context, he also contributed to the <code class="language-plaintext highlighter-rouge">deep-river</code> online deep learning framework as a co-developer, where his involvement is focused on anomaly detection techniques.</p>
+
+<p><br clear="left" /></p>
+
+<p><img src="presenter-pics/hoang-anh.ngo.jpg" alt="drawing" width="220" style="border-radius:60%" class="image-left" /></p>
+
+<p><strong>Hoang-Anh Ngo</strong> is currently supported by the AI Institute and the School of Computing and Mathematical Sciences, University of Waikato under an External Study Award (ESA) to support his research on <code class="language-plaintext highlighter-rouge">River</code>, the machine learning library in Python for data streams.</p>
+
+<p>His research interests lies in the field of machine learning for evolving data stream, particularly in online clustering and classification algorithms. Previously, he joined the team of IT Specialists in COVID-19 task force, formed by the Ministry of Health of Vietnam as a Epidemiological Modelling Unit head.</p>
+
+<p><br clear="left" /></p>
+
+<p><img src="presenter-pics/minh-huong.le-nguyen.jpg" alt="drawing" width="220" style="border-radius:60%" class="image-left" /></p>
+
+<p><strong>Minh-Huong Le-Nguyen</strong> is a third-year doctoral student at LCTI, Télécom Paris, Institut Polytechnique de Paris in France. Her doctoral research focuses on the applications of machine learning on data streams to implement predictive maintenance in the railway industry. She received her Bachelor’s degree in Computer Science at University Pierre and Marie Curie (France) in 2013, then she graduated from Télécom Paris with a Master’s degree in Data Science in 2019.</p>
+
+<p><br clear="left" /></p>
+
+<p><img src="presenter-pics/albert-bifet.jpg" alt="drawing" width="220" style="border-radius:60%" class="image-left" /></p>
+
+<p><strong>Albert Bifet</strong> is a Professor of AI and the DIrector of the Te Ipu o te Mahara AI Institute  at University of Waikato, and Professor of Big Data at Data, Intelligence and Graphs (DIG) LTCI, Télécom Paris. Problems he investigate are motivated by large scale data, the Internet of Things (IoT), and Big Data Science. He co-leads the open source projects MOA (Massive On-line Analysis), Apache SAMOA (Scalable Advanced Massive Online Analysis) and StreamDM.</p>
+
+<p>Website: <a href="https://albertbifet.com/">https://albertbifet.com/</a></p>
+
+<h1 id="presenters-contact-information">Presenters’ contact information</h1>
+
+<h3 id="jacob-montiel">Jacob Montiel</h3>
+
+<p>  Artificial Intelligence Institute, University of Waikato, Hamilton, New Zealand and LCTI, Télécom Paris, Institut Polytechnique de Paris, France</p>
+
+<p>  Email: <a href="mailto:jmontiel@waikato.ac.nz">jmontiel@waikato.ac.nz</a></p>
+
+<h3 id="hoang-anh-ngo">Hoang-Anh Ngo</h3>
+
+<p>  LCTI, Télécom Paris, Institut Polytechnique de Paris, France</p>
+
+<p>  Email: <a href="mailto:hoang.ngo@telecom-paris.fr">hoang.ngo@telecom-paris.fr</a></p>
+
+<h3 id="minh-huong-le-nguyen">Minh-Huong Le Nguyen</h3>
+
+<p>  LCTI, Télécom Paris, Institut Polytechnique de Paris, France</p>
+
+<p>  Email: <a href="mailto:minh.lenguyen@telecom-paris.fr">minh.lenguyen@telecom-paris.fr</a></p>
+
+<h3 id="albert-bifet">Albert Bifet</h3>
+
+<p>  Artificial Intelligence Institute, University of Waikato, Hamilton, New Zealand and LCTI, Télécom Paris, Institut Polytechnique de Paris, France</p>
+
+<p>  Email: <a href="mailto:abifet@waikato.ac.nz">abifet@waikato.ac.nz</a></p>
+
+<h1 id="outline-including-a-short-summary-of-every-section">Outline including a short summary of every section</h1>
+
+<p>The outline of the tutorial, which expands along the period of <strong>3 hours</strong> (half-day), is as follows:</p>
+
+<ul>
+  <li>
+    <p>Introduction to data stream (online) machine learning (approximately <strong>45 minutes</strong>)</p>
+
+    <ul>
+      <li>What is online machine learning, and why do we need online machine learning?</li>
+      <li>Differences, advantages and disadvantages of online machine learning compared to batch/traditional machine learning.</li>
+      <li>Introduction to River, a hands-on Python library for machine learning merged from <code class="language-plaintext highlighter-rouge">Creme</code> and <code class="language-plaintext highlighter-rouge">scikit-multiflow</code>.</li>
+      <li>Practical applications of <code class="language-plaintext highlighter-rouge">River</code> in classification, concept drifts, implementation of estimators, etc. and displaying real-time results using <code class="language-plaintext highlighter-rouge">holoviews</code>.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Online clustering algorithms and evaluation metrics (approximately <strong>1 hour and 30 minutes</strong>):</p>
+
+    <ul>
+      <li>A literature survey on existing clustering algorithms, the general concepts and their evolution.</li>
+      <li>Primary differences between clustering and classification evaluation metrics, which might lead to wrong interpretation of final results.</li>
+      <li>Real-world applications of online clustering algorithms and evaluation metrics in practical problems.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Use cases and benchmarking (approximately <strong>45 minutes</strong>):</p>
+
+    <ul>
+      <li>Comparison between online and traditional/batch clustering algorithms.</li>
+      <li>Motivation, setting and system requirements for conducting benchmarking.</li>
+      <li>Tutorial on benchmarking using the <code class="language-plaintext highlighter-rouge">River</code> package and the associated available <code class="language-plaintext highlighter-rouge">git</code> repository and <code class="language-plaintext highlighter-rouge">terminal</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="introduction-to-data-stream-online-machine-learning">Introduction to data stream (online) machine learning</h2>
+
+<p>This part is intended to provide the motivation and necessity of online stream learning. As a matter of fact, traditional machine learning methods can not deal with an extremely large amount of data with limited resources and time constrains, which means that there is an urgent need for specific data stream machine learning methods. Besides providing insights on advantages and disadvantages of online machine learning, we will also provide an introduction to <code class="language-plaintext highlighter-rouge">River</code>, a Python library aimed to become a go-to toolkit for this purpose.</p>
+
+<h2 id="a-literature-survey-on-online-clustering-algorithms-and-metrics">A literature survey on online clustering algorithms and metrics</h2>
+
+<p>This part will first start with an extensive survey on online clustering algorithms. First, we will start with the development from the first algorithms (<code class="language-plaintext highlighter-rouge">BIRCH</code>/<code class="language-plaintext highlighter-rouge">CluStream</code>), then to the evolution based on different approaches. These approaches include either distance-based, grid-based, model-based or projected, two-phase, type of time windows (damped, sliding, landmark or pyramidal), or the use of medoids/centroids.</p>
+
+<p>Moreover, one aspect of online clustering algorithms that are usually neglected are the usages of validation metrics. Usually, classification metrics are used as a replacement, which may lead to the wrong interpretation of final results and the choice of hyperparameters. As such, in this part, we will also focus on the construction of these metrics, and also how to apply them in analyzing clustering algorithms’ performances when put into practice.</p>
+
+<h2 id="practical-applications-and-benchmarking-using-the-clustering-module-of-river">Practical applications and benchmarking using the clustering module of River</h2>
+
+<p>The final part serves as a practical tutorial on the usage of River and the associated clustering module in real-life problems. First, online clustering algorithms will be put into comparison with traditional/batch methods in terms of performance, memory and time usage to prove that although online methods takes up less resources, they have the ability to obtain a similar accuracy. Then, the setting, system requirement and method of benchmarking and choosing the appropriate hyperparameter sets are discussed.</p>
+
+<h1 id="specific-goals-and-objectives">Specific goals and objectives</h1>
+
+<p>The specific goal of this tutorial is to act as a literature survey and an introduction to online clustering algorithms, metrics and their recent advances through <code class="language-plaintext highlighter-rouge">River</code> - an existing Python online machine learning library. Through that, it also provides all necessary tools and techniques, as a framework, to apply online clustering algorithms in real-world scenarios and to develop practical applications in line with its theoretical background.</p>
+
+<ul>
+  <li>Present an introduction on online machine learning and its advantages compared to traditional/batch machine learning.</li>
+  <li>Provide core theoretical background to understand how clustering algorithms and methods are designed.</li>
+  <li>Introduce <code class="language-plaintext highlighter-rouge">River</code> as a new, go-to library/framework for building online machine learning algorithms.</li>
+  <li>Give practical examples and insights on how to use River in real-life applications and benchmarking.</li>
+  <li>Discuss the past, present, future challenges and future challenges and how researchers have been tackling those in their algorithms’ development.</li>
+</ul>
+
+<h1 id="expected-background-of-the-audience">Expected background of the audience</h1>
+
+<p>The target audience of this tutorial include any researchers and practitioners with interests on machine learning for big data/evolving data streams and/or IoT applications. There will be no special requirement on previous experience on data stream learning; however, either experience with traditional machine learning concepts and frameworks (<code class="language-plaintext highlighter-rouge">scikit-learn</code>, <code class="language-plaintext highlighter-rouge">keras</code>, <code class="language-plaintext highlighter-rouge">pytorch</code>, etc.) or previous interactions with <code class="language-plaintext highlighter-rouge">scikit-multiflow</code>, <code class="language-plaintext highlighter-rouge">Creme</code> or <code class="language-plaintext highlighter-rouge">River</code> (the merge of the two) is a plus.</p>
+
+<h1 id="related-materials">Related materials</h1>
+
+<p>For all related materials, including presentation slides, demos, source code, related papers and any other piece of information, please visit <a href="./related-materials.html">this page</a>.</p>
+
+<h1 id="citation">Citation</h1>
+
+<p>If you find this tutorial useful for your research and you would like to cite it as a scientific source, please cite it as:</p>
+
+<div class="language-bibtex highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">10.1145/3534678.3542600</span><span class="p">,</span>
+<span class="na">author</span> <span class="p">=</span> <span class="s">{Montiel, Jacob and Ngo, Hoang-Anh and Le-Nguyen, Minh-Huong and Bifet, Albert}</span><span class="p">,</span>
+<span class="na">title</span> <span class="p">=</span> <span class="s">{Online Clustering: Algorithms, Evaluation, Metrics, Applications and Benchmarking}</span><span class="p">,</span>
+<span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
+<span class="na">isbn</span> <span class="p">=</span> <span class="s">{9781450393850}</span><span class="p">,</span>
+<span class="na">publisher</span> <span class="p">=</span> <span class="s">{Association for Computing Machinery}</span><span class="p">,</span>
+<span class="na">address</span> <span class="p">=</span> <span class="s">{New York, NY, USA}</span><span class="p">,</span>
+<span class="na">url</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1145/3534678.3542600}</span><span class="p">,</span>
+<span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1145/3534678.3542600}</span><span class="p">,</span>
+<span class="na">abstract</span> <span class="p">=</span> <span class="s">{Online clustering algorithms play a critical role in data science, especially with the advantages regarding time, memory usage and complexity, while maintaining a high performance compared to traditional clustering methods. This tutorial serves, first, as a survey on online machine learning and, in particular, data stream clustering methods. During this tutorial, state-of-the-art algorithms and the associated core research threads will be presented by identifying different categories based on distance, density grids and hidden statistical models. Clustering validity indices, an important part of the clustering process which are usually neglected or replaced with classification metrics, resulting in misleading interpretation of final results, will also be deeply investigated.Then, this introduction will be put into the context with River, a go-to Python library merged between Creme and scikit-multiflow. It is also the first open-source project to include an online clustering module that can facilitate reproducibility and allow direct further improvements. From this, we propose methods of clustering configuration, applications and settings for benchmarking, using real-world problems and datasets.}</span><span class="p">,</span>
+<span class="na">booktitle</span> <span class="p">=</span> <span class="s">{Proceedings of the 28th ACM SIGKDD Conference on Knowledge Discovery and Data Mining}</span><span class="p">,</span>
+<span class="na">pages</span> <span class="p">=</span> <span class="s">{4808–4809}</span><span class="p">,</span>
+<span class="na">numpages</span> <span class="p">=</span> <span class="s">{2}</span><span class="p">,</span>
+<span class="na">keywords</span> <span class="p">=</span> <span class="s">{online clustering, data streams, benchmarking, stream clustering, decision support, stream learning}</span><span class="p">,</span>
+<span class="na">location</span> <span class="p">=</span> <span class="s">{Washington DC, USA}</span><span class="p">,</span>
+<span class="na">series</span> <span class="p">=</span> <span class="s">{KDD '22}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h1 id="references">References</h1>
+
+<ol>
+  <li>
+    <p>Jacob Montiel, Max Halford, Saulo Martiello Mastelini, Geoffrey Bolmier, Raphael Sourty, Robin Vaysse, Adil Zouitine, Heitor Murilo Gomes, Jesse Read, Talel Abdessalem, and Albert Bifet. 2021. River: machine learning for streaming data in Python. <em>Journal of Machine Learning Research</em> 22 (April 2021), 1–8. <a href="http://jmlr.org/papers/v22/20-1380.html">http://jmlr.org/papers/v22/20-1380.html</a></p>
+  </li>
+  <li>
+    <p>Matthias Carnein and Heike Trautmann. 2019. Optimizing Data Stream Representation: An Extensive Survey on Stream Clustering Algorithms. <em>Business &amp; Information Systems Engineering</em> 61 (2019), 277–297. <a href="https://doi.org/10.1007/s12599-019-00576-5">https://doi.org/10.1007/s12599-019-00576-5</a></p>
+  </li>
+  <li>
+    <p>Mohammed Ghesmoune, Mustapha Lebbah, and Hanene Azzag. 2016. State-of-the-art on clustering data streams. <em>Big Data Analytics</em> 1, 1 (2016), 13.</p>
+  </li>
+  <li>
+    <p>Amineh Amini, Teh Ying Wah, and Hadi Saboohi. 2014. On Density-Based Data Streams Clustering Algorithms: A Survey. <em>Journal of Computer Science and Technology</em> 29, 1 (Jan. 2014), 116–141.</p>
+  </li>
+  <li>
+    <p>Ali Javed, Byung Suk Lee, and Donna M. Rizzo. 2020. A benchmark study on time series clustering. <em>Machine Learning with Applications</em> 1 (Sept. 2020), 100001. <a href="https://doi.org/10.1016/j.mlwa.2020.100001">https://doi.org/10.1016/j.mlwa.2020.100001</a></p>
+  </li>
+  <li>
+    <p>Matthias Carnein, Assenmacher Dennis, and Heike Trautmann. 2017. An Empirical Comparison of Stream Clustering Algorithms. In <em>Proceedings of the Computing Frontiers Conference (CF’17)</em>. Association for Computing Machinery, New York, NY, USA, 361––366. <a href="https://doi.org/10.1145/3075564.3078887">https://doi.org/10.1145/3075564.3078887</a></p>
+  </li>
+  <li>
+    <p>Leonardo Enzo Brito Da Silva, Niklas Max Melton, and Donald C. Wunsch. 2020. Incremental Cluster Validity Indices for Online Learning of Hard Partitions: Extensions and Comparative Study. <em>IEEE Access</em> 8 (Jan. 2020), 22025–22047. <a href="https://doi.org/10.1109/ACCESS.2020.2969849">https://doi.org/10.1109/ACCESS.2020.2969849</a></p>
+  </li>
+  <li>
+    <p>Albert Bifet, Ricard Gavaldà, Geoff Holmes, and Bernhard Pfahringer. 2018. <em>Machine Learning for Data Streams: with Practical Examples in MOA</em>. The MIT Press, Cambridge, MA, USA. <a href="https://doi.org/10.7551/mitpress/10654.001.0001">https://doi.org/10.7551/mitpress/10654.001.0001</a></p>
+  </li>
+  <li>
+    <p>Max Halford, Geoffrey Bolmier, Raphael Sourty, Robin Vaysse, and Adil Zouitine. 2019. creme, a Python library for online machine learning. <a href="https://github.com/MaxHalford/creme">https://github.com/MaxHalford/creme</a></p>
+  </li>
+  <li>
+    <p>Jacob Montiel, Jesse Read, Albert Bifet, and Talel Abdessalem. 2018. Scikit-Multiflow: A Multi-output Streaming Framework. <em>Journal of Machine Learning Research</em> 19, 72 (2018), 1–5. <a href="http://jmlr.org/papers/v19/18-251.html">http://jmlr.org/papers/v19/18-251.html</a></p>
+  </li>
+  <li>
+    <p>Stratos Mansalis, Eirini Ntoutsi, Nikos Pelekis, and Yannis Theodoridis. 2018. An evaluation of data stream clustering algorithm. <em>Statistical Analysis and Data Mining: The ASA Data Science Journal</em> 11 (2018), 167–187.</p>
+  </li>
+  <li>
+    <p>Charu C. Aggarwal, Jiawei Han, Jianyong Wang, and Phillip S. Yu. 2003. A Framework for Clustering Evolving Data Streams. <em>In Proceedings of the 29th International Conference on Very Large Data Bases - Volume 29</em> (Berlin, Germany) <em>(VLDB ’03)</em>. VLDB Endowment, Berlin, Germany, 81–92.</p>
+  </li>
+  <li>
+    <p>Feng Cao, Martin Estert, Weining Qian, and Aoying Zhou. 2006. Density-Based Clustering over an Evolving Data Stream with Noise. In <em>Proceedings of the 2006 SIAM International Conference on Data Mining (SDM)</em>. Society for Industrial and Applied Mathematics (SIAM), Philadelphia, PA, USA, 328–339. <a href="https://doi.org/10.1137/1.9781611972764.29">https://doi.org/10.1137/1.9781611972764.29</a></p>
+  </li>
+  <li>
+    <p>Marcel R. Ackermann, Marcus Martens, Christoph Raupach, Kamil Swierkot, Christiane Lammersen, and Christian Sohler. 2012. StreamKM++: A Clustering Algorithm for Data Streams. <em>ACM J. Exp. Algorithmics</em> 17, Article 2.4 (May 2012), 30 pages. <a href="https://doi.org/10.1145/2133803.2184450">https://doi.org/10.1145/2133803.2184450</a></p>
+  </li>
+  <li>
+    <p>L. O’Callaghan, N. Mishra, A. Meyerson, S. Guha, and R. Motwani. 2002. Streaming-data algorithms for high-quality clustering. In <em>Proceedings 18th International Conference on Data Engineering</em>. IEEE, San Jose, CA, USA, 685–694. <a href="https://doi.org/10.1109/ICDE.2002.994785">https://doi.org/10.1109/ICDE.2002.994785</a></p>
+  </li>
+  <li>
+    <p>Michael Hashler and Matthew Bolaños. 2016. Clustering Data Streams Based on Shared Density between Micro-Clusters. <em>IEEE Transactions on Knowledge and Data Engineering</em> 28, 6 (2016), 1449–1461. <a href="https://doi.org/10.1109/TKDE.2016.2522412">https://doi.org/10.1109/TKDE.2016.2522412</a></p>
+  </li>
+  <li>
+    <p>Yixin Chen and Li Tu. 2007. Density-based clustering for real-time stream data. In <em>Proceedings of the 13th ACM SIGKKDD internaional conference on Knowledge discovery and data mining (KDD ’07)</em>. Association for Computing Machinery, New York, NY, USA, 133–142. <a href="https://doi.org/10.1145/1281192.1281210">https://doi.org/10.1145/1281192.1281210</a></p>
+  </li>
+</ol>
+
+
+      <footer class="site-footer">
+        
+          <span class="site-footer-owner"><a href="https://github.com/hoanganhngo610/deep-river.ecml-pkdd.2023">This tutorial's website</a> is maintained by <a href="https://github.com/hoanganhngo610">Hoang Anh Ngo</a>.</span>
+        
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
+      </footer>
+    </main>
+  </body>
+</html>
