@@ -46,6 +46,24 @@
 
 <!-- end custom head snippets -->
 
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      TeX: {
+        equationNumbers: {
+          autoNumber: "AMS"
+        }
+      },
+      tex2jax: {
+        inlineMath: [ ['$','$'], ['\\(', '\\)'] ],
+        displayMath: [ ['$$','$$'] ],
+        processEscapes: true,
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
@@ -79,12 +97,48 @@
 
 <ul>
   <li><strong>Place</strong>: Polytechnico di Torino</li>
-  <li><strong>Time</strong>: Friday, September 22nd 2023, afternoon (GMT+1)</li>
+  <li><strong>Time</strong>: Friday, September 22<sup>nd</sup> 2023, afternoon (GMT+1)</li>
 </ul>
 
 <h1 id="abstract">Abstract</h1>
 
 <p>Machine learning algorithms have become indispensable in today’s world. They support and accelerate the way we make decisions based on the data at hand. This acceleration means that data structures that were valid at a moment could no longer be valid in the future. With these changing data structures, it is necessary to adapt machine learning (ML) systems incrementally to the new data. This is done with the use of online learning or continuous ML technologies. While Deep Learning technologies have shown exceptional performance on predefined datasets, they have not been widely applied to online, streaming and continuous learning. This tutorial illustrates with the frameworks <code class="language-plaintext highlighter-rouge">River</code> and <code class="language-plaintext highlighter-rouge">deep-river</code> the opportunities, but also the potential pitfalls for the application of neural networks in online learning environments.</p>
+
+<p><strong>Keywords</strong>: stream learning, concept drift, data stream mining, incremental modelling, online deep learning, neural networks, decision support</p>
+
+<h1 id="motivation">Motivation</h1>
+
+<p>Having algorithms at hand that can process data that arrives continuously in the form of data streams is crucial. 
+Online Learning potentially has to deal with real-time data rather than previously known data sets. 
+To deal with the evaluation and application of models on data streams, Bifet et al. [5] defined the online learning requirements as follows:</p>
+<ul>
+  <li>Process an instance at a time, and inspect it (at most) once.</li>
+  <li>Use a limited amount of time to process each instance.</li>
+  <li>Use a limited amount of memory.</li>
+  <li>Be ready to give an answer (e.g. prediction) at any time</li>
+  <li>Adapt to temporal changes.</li>
+</ul>
+
+<p>The following figure depicts how an online learning framework is able to comply with the data stream requirements for supervised learning tasks. 
+The model processes labeled data points $\left(\overrightarrow{x},y\right)$ by updating the model while instead predicting a label $\hat{y}$ for each unlabeled instance $\overrightarrow{x}$. 
+Thus, the model processes each instance from an evolving data stream, updates the underlying model, and is ready to predict at any time.</p>
+
+<p>Even until now, the development of stream algorithms is quite scattered and decentralized. Previously, algorithms were usually self-developed and maintained by the respective authors in various different programming languages, with none of the existing frameworks being widely adopted within the online learning community. Currently, <code class="language-plaintext highlighter-rouge">River</code> is becoming not only a go-to library for online machine learning tasks, but also a pioneer framework for the implementation of any new algorithm within the field.</p>
+
+<figure>
+  <img src="./stream-structure.png" alt="stream-structure" />
+  <figcaption><strong>Figure 1</strong>: Structure of the interaction between data stream and prediction model.</figcaption>
+</figure>
+
+<p>A significant question in the context of the advancement of <code class="language-plaintext highlighter-rouge">River</code> is whether deep learning algorithms, which have been a staple in many batch learning frameworks for some time, can also fulfill the requirements and therefore be applied within online learning environments. To this end, we developed <code class="language-plaintext highlighter-rouge">deep-river</code> which combines the <code class="language-plaintext highlighter-rouge">River</code> API for online learning algorithms and <code class="language-plaintext highlighter-rouge">PyTorch</code> for the flexible development of neural architectures.
+Based on <code class="language-plaintext highlighter-rouge">River</code> and the newly developed framework <code class="language-plaintext highlighter-rouge">deep-river</code>, we present in this tutorial the chances and pitfalls for online deep learning by</p>
+<ul>
+  <li>addressing the online learning requirements,</li>
+  <li>the <code class="language-plaintext highlighter-rouge">River</code> API and discussing their</li>
+  <li>applicability in deep learning architectures.</li>
+</ul>
+
+<p>The tutorial will cover the transition from simple conventional machine learning models to sophisticated neural architectures while considering not only classification, regression and anomaly detection metrics, but also time and memory consumption which are key factors for the throughput of the underlying model.</p>
 
 <h1 id="presenters-bibliography">Presenters’ bibliography</h1>
 

@@ -2,6 +2,7 @@
 layout: default
 title: "Opportunities and Challenges for Online Deep Learning"
 description: Tutorial presented at the European Conference on Machine Learning and Principles and Practice of Knowledge Discovery in Databases (ECML-PKDD), 2023, Turin, Italy.
+mathjax: true
 ---
 
 <style type="text/css">
@@ -18,11 +19,43 @@ description: Tutorial presented at the European Conference on Machine Learning a
 The agenda of the tutorial will be as follows:
 
 * **Place**: Polytechnico di Torino
-* **Time**: Friday, September 22nd 2023, afternoon (GMT+1)
+* **Time**: Friday, September 22<sup>nd</sup> 2023, afternoon (GMT+1)
 
 # Abstract
 
 Machine learning algorithms have become indispensable in today's world. They support and accelerate the way we make decisions based on the data at hand. This acceleration means that data structures that were valid at a moment could no longer be valid in the future. With these changing data structures, it is necessary to adapt machine learning (ML) systems incrementally to the new data. This is done with the use of online learning or continuous ML technologies. While Deep Learning technologies have shown exceptional performance on predefined datasets, they have not been widely applied to online, streaming and continuous learning. This tutorial illustrates with the frameworks `River` and `deep-river` the opportunities, but also the potential pitfalls for the application of neural networks in online learning environments.
+
+**Keywords**: stream learning, concept drift, data stream mining, incremental modelling, online deep learning, neural networks, decision support
+
+# Motivation
+
+Having algorithms at hand that can process data that arrives continuously in the form of data streams is crucial. 
+Online Learning potentially has to deal with real-time data rather than previously known data sets. 
+To deal with the evaluation and application of models on data streams, Bifet et al. [5] defined the online learning requirements as follows:
+  - Process an instance at a time, and inspect it (at most) once.
+  - Use a limited amount of time to process each instance.
+  - Use a limited amount of memory.
+  - Be ready to give an answer (e.g. prediction) at any time
+  - Adapt to temporal changes.
+
+The following figure depicts how an online learning framework is able to comply with the data stream requirements for supervised learning tasks. 
+The model processes labeled data points $\left(\overrightarrow{x},y\right)$ by updating the model while instead predicting a label $\hat{y}$ for each unlabeled instance $\overrightarrow{x}$. 
+Thus, the model processes each instance from an evolving data stream, updates the underlying model, and is ready to predict at any time. 
+
+Even until now, the development of stream algorithms is quite scattered and decentralized. Previously, algorithms were usually self-developed and maintained by the respective authors in various different programming languages, with none of the existing frameworks being widely adopted within the online learning community. Currently, `River` is becoming not only a go-to library for online machine learning tasks, but also a pioneer framework for the implementation of any new algorithm within the field.
+
+<figure>
+  <img src="./stream-structure.png" alt="stream-structure"/>
+  <figcaption><strong>Figure 1</strong>: Structure of the interaction between data stream and prediction model.</figcaption>
+</figure>
+
+A significant question in the context of the advancement of `River` is whether deep learning algorithms, which have been a staple in many batch learning frameworks for some time, can also fulfill the requirements and therefore be applied within online learning environments. To this end, we developed `deep-river` which combines the `River` API for online learning algorithms and `PyTorch` for the flexible development of neural architectures.
+Based on `River` and the newly developed framework `deep-river`, we present in this tutorial the chances and pitfalls for online deep learning by 
+- addressing the online learning requirements, 
+- the `River` API and discussing their 
+- applicability in deep learning architectures. 
+
+The tutorial will cover the transition from simple conventional machine learning models to sophisticated neural architectures while considering not only classification, regression and anomaly detection metrics, but also time and memory consumption which are key factors for the throughput of the underlying model.
 
 # Presenters' bibliography
 
