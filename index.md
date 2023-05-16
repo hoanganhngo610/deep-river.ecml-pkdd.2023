@@ -162,6 +162,35 @@ Previous interactions with online machine learning packages/tools, for example `
 
 For any developer who wants to contribute to `River` or `deep-river`, or employ either of these two packages within their research work, we recommend a high level of familiarity with version control via `Git`, functionalities of `GitHub` (e.g. pull requests, issues, a discussion, GitHub Actions) and code formatters in Python (`flake8`, `black`, `isort`, etc.).
 
+# Prior offerings
+
+Up to date, to the authors' knowledge, there has been **no** presented tutorial involving either of the following elements:
+
+- A detailed investigation into the problem of fairness and interpretability of online machine learning algorithms in general. This will be the main emphasis in our introduction to data stream machine learning, accounting for approximately **50%** of the first part of the tutorial.
+- In-depth demonstrations of the developing process i.e. on how to develop new algorithms within `River`, `deep-river` and how actual previous problems and solutions during the process were resolved.
+
+  This will be followed up by a presentation of the development  and maintenance roadmap of the framework, which is one of the most crucial parts of any open-source projects.
+    
+  In other words, this tutorial will be more aimed at developers. 
+- The topic of online deep learning will be investigated thoroughly, not only as a literature survey but it is also put into practical contexts, using `deep-river`. This also serves as the first formal introduction to the software package since its inaugural version in late August 2022.
+
+Previously, there has been only **two** editions of a tutorial briefly that briefly introduced stream machine learning and `River`'s related use cases, including:
+
+- First offering:
+  - **Title:** Online Clustering: Algorithms, Evaluation, Metrics, Applications and Benchmarking using River.
+  - **Conference:** The 26th Pacific - Asia Conference on Knowledge Discovery and Data Mining (PAKDD 2022).
+  - **Time and location:** May 16<sup>th</sup>, 2022, Chengdu, China (presented remotely due to COVID-19 restrictions).
+  - **Number of participants:** Unknown. Due to the COVID-19 prevention measures and time differences, the tutorial is presented online with a pre-recorded video.      
+- Second offering:
+  - **Title:** Online Clustering: Algorithms, Evaluation, Metrics, Applications and Benchmarking.
+  - **Conference:** The 28th ACM SIGKDD Cofnerence on Knowledge Discovery and Data Mining (KDD '22).
+  - **Type:** Lecture-style tutorial.
+  - **Content:** Publicly available within [the tutorial's website](https://hoanganhngo610.github.io/river-clustering.kdd.2022/) and [the conference's proceedings](https://dl.acm.org/doi/10.1145/3534678.3542600). Within the [Related materials](https://hoanganhngo610.github.io/river-clustering.kdd.2022/related-materials.html) part of the tutorial's website, all related information can be found, including presentation slides, demos and source code.
+  - **Time and location:** August 14<sup>th</sup>, 2022, Washington DC Convention Center, Washington, DC, United States.
+  - **Number of participants:** Approximately 50 participants.
+
+However, the proposed tutorial will be of a total difference from the two editions mentioned previously, regarding both the content and level of practical detail. This will also be the **first time/edition** that this tutorial will be presented.
+
 # Related materials
 
 For all related materials, including presentation slides, demos, source code, related papers and any other piece of information, please visit [this page](./related-materials.html).
