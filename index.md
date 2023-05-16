@@ -62,8 +62,6 @@ His research interests lies in the field of machine learning for evolving data s
 
 Website: [https://albertbifet.com/](https://albertbifet.com/)
 
-
-
 # Presenters' contact information
 
 ### Cedric Kulbach
@@ -96,56 +94,73 @@ Website: [https://albertbifet.com/](https://albertbifet.com/)
 
 &nbsp; Email: [abifet@waikato.ac.nz](mailto:abifet@waikato.ac.nz)
 
-# Outline including a short summary of every section
+# Outline
 
-The outline of the tutorial, which expands along the period of **3 hours** (half-day), is as follows:
+The tutorial is held within **4 hours** (with a **30-minute break** between the two sections) and is intended to be a combination between a **lecture-style tutorial** and a **hands-on tutorial**, with a strong emphasis on **practical demonstrations** and **benchmarking**. The detailed schedule and the topics covered within the tutorial are all depicted in section [Detailed schedule](#detailed-schedule).
 
-* Introduction to data stream (online) machine learning (approximately **45 minutes**)
+All material covered within the tutorial, including lecture slides and practical demos, will be publicly available in advance on a dedicated website. Moreover, within the tutorial, these examples will be run in real-time. If the attendees want to work along, a laptop would be necessary.
 
-  - What is online machine learning, and why do we need online machine learning?
-  - Differences, advantages and disadvantages of online machine learning compared to batch/traditional machine learning.
-  - Introduction to River, a hands-on Python library for machine learning merged from `Creme` and `scikit-multiflow`.
-  - Practical applications of `River` in classification, concept drifts, implementation of estimators, etc. and displaying real-time results using `holoviews`.
+Last but not least, no specific operating system, software or tool is required apart from a working Python installation with version later than or equal to 3.8. Both `River`, `deep-river` and their dependencies can easily be installed using the package manager `pip`, which we will also be briefly walk through within the tutorial. 
 
-* Online clustering algorithms and evaluation metrics (approximately **1 hour and 30 minutes**):
+## Detailed schedule
 
-  - A literature survey on existing clustering algorithms, the general concepts and their evolution.
-  - Primary differences between clustering and classification evaluation metrics, which might lead to wrong interpretation of final results.
-  - Real-world applications of online clustering algorithms and evaluation metrics in practical problems.
+The schedule of this tutorial can be divided into two parts. 
 
-* Use cases and benchmarking (approximately **45 minutes**):
+  - In the first part, we introduce data stream machine learning as well as the `River` framework. This part is depicted in more detail in [the following subsection](#introduction-to-data-stream-online-machine-learning-and-river-labelsubsubsecoutlineriver).
+  - In the second part, we present the transition from traditional machine learning on data streams to online deep learning, taking into account the requirements stated in the first part of the tutorial. We depict a detailed description of the second part within [this section](#introduction-to-online-deep-learning-and-deep-river).
 
-  - Comparison between online and traditional/batch clustering algorithms.
-  - Motivation, setting and system requirements for conducting benchmarking.
-  - Tutorial on benchmarking using the `River` package and the associated available `git` repository and `terminal`.
+In the following, we present a detailed schedule of the Framework.
 
-## Introduction to data stream (online) machine learning
+1. Introduction to data stream (online) machine learning and `River` (approximately **120 min**):
+    1. Why do we need stream machine learning? (**5 min**) What are the differences, advantages and disadvantages of online machine learning compared to traditional machine learning methods? (**10 min**)
+    1. What are the methods to induce fairness in online machine learning? (**30 min**)
+    1. How can a data stream machine learning model be interpreted? (**30 min**)
+    1. A brief introduction to `River` (**5 min**):
+      - How was `River` created as a merge between `Creme` and `scikit-multiflow`?
+      - `River`'s design principles
+      - Major advantages of `River` towards previously available frameworks
+      - Updates/improvements throughout each version.
+    1. What steps are required to develop/implement a model within `River`? (**5 min**)
+    1. From nowcasting to forecasting in online learning. (**5 min**)
+    1. Demos and examples of previous problems and solutions during the development progress (**10 min**)
+    1. Live visualization and benchmarking of stream algorithms and their results in synthetic and real-life scenarios. (**20 min**)
+1. Introduction to online deep learning and `deep-river` (approximately **90 min**):l
+    1. How do deep learning models follow the online learning Requirements~\ref{rq:online_learning}? (**5 min**)
+    1. How do we cover all machine learning tasks from `River` with deep learning models? (**15 min**)
+    1. A brief introduction into the deep learning extension and the framework. (**20 min**)
+      - How does `deep-river` follow the `River` design principles. (**10 min**)
+      - How is `PyTorch` integrated into the `River` API. (**10 min**)
+    1. Chances and pitfalls of online deep learning (**50 min**): 
+      - To what extent does architecture influence model performance? From nowcasting to forecasting in online deep learning. (**10 min**)
+      - How does the integration of `PyTorch` influence the models throughput? (**10 min**)
+      - Does the usage of GPUs increase the throughput of the deep learning model? (**30 min**)
 
-This part is intended to provide the motivation and necessity of online stream learning. As a matter of fact, traditional machine learning methods can not deal with an extremely large amount of data with limited resources and time constrains, which means that there is an urgent need for specific data stream machine learning methods. Besides providing insights on advantages and disadvantages of online machine learning, we will also provide an introduction to `River`, a Python library aimed to become a go-to toolkit for this purpose.
+## Introduction to data stream (online) machine learning and `River`
 
-## A literature survey on online clustering algorithms and metrics
+We will begin the tutorial by explaining the motivation and necessity of data stream machine learning, which offers a significant advantage compared to traditional machine learning methods when dealing with particularly large or infinite amounts of data with constrained time and resources.
 
-This part will first start with an extensive survey on online clustering algorithms. First, we will start with the development from the first algorithms (`BIRCH`/`CluStream`), then to the evolution based on different approaches. These approaches include either distance-based, grid-based, model-based or projected, two-phase, type of time windows (damped, sliding, landmark or pyramidal), or the use of medoids/centroids.
+The motivation will lead into the creation of `River`, a merge between `Creme` and `scikit-multiflow`. `River` is becoming more and more of a go-to toolkit in the field, with various advantages and many more features offered compared to its competitors. In addition to introducing the fundamental concepts of the framework, we will also provide detailed guidance on how to contribute to `River` and teach the participants how to integrate `River` into their research. 
 
-Moreover, one aspect of online clustering algorithms that are usually neglected are the usages of validation metrics. Usually, classification metrics are used as a replacement, which may lead to the wrong interpretation of final results and the choice of hyperparameters. As such, in this part, we will also focus on the construction of these metrics, and also how to apply them in analyzing clustering algorithms' performances when put into practice.
+Last but not least, we will present a comprehensive overview, along with the latest research interests in fairness and interpretability of online machine learning models. 
+Due to the fact that stream machine learning models are designed to handle an infinite amount of information while having to preserve accuracy under concept drifts, this is a much younger yet more challenging and interesting research field compared to that of traditional machine learning methods. 
 
-## Practical applications and benchmarking using the clustering module of River
+## Introduction to online deep learning and `deep-river`
 
-The final part serves as a practical tutorial on the usage of River and the associated clustering module in real-life problems. First, online clustering algorithms will be put into comparison with traditional/batch methods in terms of performance, memory and time usage to prove that although online methods takes up less resources, they have the ability to obtain a similar accuracy. Then, the setting, system requirement and method of benchmarking and choosing the appropriate hyperparameter sets are discussed.
+This part will be the main part of the tutorial. 
+We will motivate the development of `deep-river` by showing how deep learning models follow the online learning requirements and what adaptations need to be made for classification and regression tasks in supervised learning as well as anomaly detection with autoencoders in an unsupervised learning setting.
+An example for such an adaptation is that the usually static architecture of a neural network classifier needs to be adapted to the emergence of previously unseen classes. 
+This is due to the fact that in an online learning scenario the total number of classes may not be known at the time of network initialization.
 
-# Specific goals and objectives
+After stating the conceptual specifics for the use of neural networks on evolving data streams, we will look at the implementation of `deep-river` and show how `PyTorch` models can be integrated into the `River` API. To illustrate the chances and challenges of online deep learning, we will provide a demonstration of the transition from classical machine learning to deep learning models based on an example data set.
 
-The specific goal of this tutorial is to act as a literature survey and an introduction to online clustering algorithms, metrics and their recent advances through `River` - an existing Python online machine learning library. Through that, it also provides all necessary tools and techniques, as a framework, to apply online clustering algorithms in real-world scenarios and to develop practical applications in line with its theoretical background.
+# Target audience
 
-* Present an introduction on online machine learning and its advantages compared to traditional/batch machine learning.
-* Provide core theoretical background to understand how clustering algorithms and methods are designed.
-* Introduce `River` as a new, go-to library/framework for building online machine learning algorithms.
-* Give practical examples and insights on how to use River in real-life applications and benchmarking.
-* Discuss the past, present, future challenges and future challenges and how researchers have been tackling those in their algorithms' development.
+The target audience of the tutorial includes any researchers and practitioners with interests in machine learning for big data, evolving data streams and IoT applications.
 
-# Expected background of the audience
+Basic knowledge of traditional- as well as deep- batch machine learning algorithms and frameworks (e.g. `Scikit-learn`, `TensorFlow`, `PyTorch`) would be helpful. 
+Previous interactions with online machine learning packages/tools, for example `MOA` (in Java), `stream` in `R`, `scikit-multiflow`, `Creme` or `River` could also be beneficial but are not required.
 
-The target audience of this tutorial include any researchers and practitioners with interests on machine learning for big data/evolving data streams and/or IoT applications. There will be no special requirement on previous experience on data stream learning; however, either experience with traditional machine learning concepts and frameworks (`scikit-learn`, `keras`, `pytorch`, etc.) or previous interactions with `scikit-multiflow`, `Creme` or `River` (the merge of the two) is a plus.
+For any developer who wants to contribute to `River` or `deep-river`, or employ either of these two packages within their research work, we recommend a high level of familiarity with version control via `Git`, functionalities of `GitHub` (e.g. pull requests, issues, a discussion, GitHub Actions) and code formatters in Python (`flake8`, `black`, `isort`, etc.).
 
 # Related materials
 
